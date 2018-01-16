@@ -1,0 +1,39 @@
+/**
+ * @version    1.0.x
+ * @package    Call to action
+ * @author     SPEDI srl http://www.spedi.it
+ * @copyright  Copyright (c) Spedi srl.
+ * @license    GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+ */
+.calltoaction{
+  &.video-bg{
+    .video-bg-wrap{
+      height: 400px;
+      overflow: hidden;
+      &::before{
+        content: '';
+        background-image: url('../image/pattern.png');
+        background-repeat: repeat;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .caption{
+        position: absolute;
+        width: 500px;
+        text-align: center;
+        color: #fff;
+        top: 120px;
+        left: 50%;
+        margin-left: -250px;
+      }
+      video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

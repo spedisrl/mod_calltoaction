@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+  <name>MOD_CALLTOACTION</name>
+	<author>SPEDI srl</author>
+	<creationDate>Novembre 2017</creationDate>
+  <copyright>Copyright (C) SPEDI srl</copyright>
+	<license>GNU/GPL license: http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>sviluppo@spedi.it</authorEmail>
+	<authorUrl>http://www.spedi.it</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_CALLTOACTION_DESC</description>
+
+    <files>
+        <filename>mod_calltoaction.xml</filename>
+        <filename module="mod_calltoaction">mod_calltoaction.php</filename>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+        <folder>css</folder>
+        <folder>image</folder>
+        <folder>lity</folder>
+    </files>
+    <config>
+      <fields name="params">
+        <fieldset name="basic">
+
+          <field
+            name="source"
+            type="list"
+            default="0"
+            label="MOD_CALLTOACTION_SOURCE"
+            description="MOD_CALLTOACTION_SOURCE_DESC">
+  					<option value="0">MOD_CALLTOACTION_OPTION_VIDEO</option>
+  					<option value="1">MOD_CALLTOACTION_OPTION_VIDEOBACGROUND</option>
+  				</field>
+
+          <field
+            name="video-url"
+            type="url"
+            label="MOD_CALLTOACTION_VIDEOURL"
+            description="MOD_CALLTOACTION_VIDEOURL_DESC"
+            showon="source:0"
+          />
+
+          <field
+            name="video-link"
+            type="url"
+            label="MOD_CALLTOACTION_VIDEOLINK"
+            description="MOD_CALLTOACTION_VIDEOLINK_DESC"
+            showon="source:0"
+          />
+
+          <field
+            name="video-image"
+            type="media"
+            label="MOD_CALLTOACTION_VIDEOIMAGE"
+            description="MOD_CALLTOACTION_VIDEOIMAGE_DESC"
+            required="true"
+            showon="source:0"
+          />
+
+          <field
+            name="video-caption"
+            type="textarea"
+            label="MOD_CALLTOACTION_VIDEOCAPTION"
+            description="MOD_CALLTOACTION_VIDEOCAPTION_DESC"
+            showon="source:0"
+          />
+
+          <field
+            name="videobg-url"
+            type="url"
+            label="MOD_CALLTOACTION_VIDEOBGURL"
+            description="MOD_CALLTOACTION_VIDEOBGURL_DESC"
+            showon="source:1"
+          />
+
+          <field
+            name="videobg-link"
+            type="url"
+            label="MOD_CALLTOACTION_VIDEOBGLINK"
+            description="MOD_CALLTOACTION_VIDEOBGLINK_DESC"
+            showon="source:1"
+          />
+
+          <field
+            name="videobg-caption"
+            type="textarea"
+            label="MOD_CALLTOACTION_VIDEOBGCAPTION"
+            description="MOD_CALLTOACTION_VIDEOBGCAPTION_DESC"
+            showon="source:1"
+          />
+
+        </fieldset>
+
+        <fieldset name="advanced">
+  				<field
+  					name="layout"
+  					type="modulelayout"
+  					label="JFIELD_ALT_LAYOUT_LABEL"
+  					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+           />
+  			</fieldset>
+
+      </fields>
+    </config>
+</extension>
